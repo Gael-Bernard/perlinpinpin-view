@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CanvasComponent } from './canvas/components/canvas/canvas.component';
+import { CanvasComponent } from './shared/canvas/components/canvas/canvas.component';
 
 const routes: Routes = [
   {

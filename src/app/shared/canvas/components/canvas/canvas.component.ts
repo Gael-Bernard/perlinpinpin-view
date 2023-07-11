@@ -1,8 +1,8 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { BehaviorSubject, Observable, Subscriber, subscribeOn } from 'rxjs';
-import Vec2 from 'src/app/util/maths/Vec2';
-import Rectangle from 'src/app/util/maths/Rectangle';
 import CanvasManager2D from '../../managers/CanvasManager';
+import Vec2 from 'src/app/shared/util/maths/Vec2';
+import Rectangle from 'src/app/shared/util/maths/Rectangle';
 
 @Component({
   selector: 'app-canvas',

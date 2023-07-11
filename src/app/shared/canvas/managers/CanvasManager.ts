@@ -1,6 +1,6 @@
-import Vec2 from "src/app/util/maths/Vec2";
-import Rectangle from '../../util/maths/Rectangle';
+import Vec2 from "src/app/shared/util/maths/Vec2";
 import FontOptions from "../model/FontOptions";
+import Rectangle from "src/app/shared/util/maths/Rectangle";
 
 export default class CanvasManager2D {
 
