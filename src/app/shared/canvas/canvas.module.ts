@@ -1,15 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CanvasComponent } from './components/canvas/canvas.component';
+import { FullscreenCanvasComponent } from './components/canvas/fullscreen-canvas.component';
 
 
 
 @NgModule({
   declarations: [
-    CanvasComponent
+    FullscreenCanvasComponent,
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    FullscreenCanvasComponent,
   ]
 })
 export class CanvasModule { }

@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CanvasComponent } from './shared/canvas/components/canvas/canvas.component';
+import { GridVectorsMapComponent } from './perlin-maps/grid-vectors-map/grid-vectors-map.component';
 
 const routes: Routes = [
   {
     path: "**",
-    component: CanvasComponent,
+    component: GridVectorsMapComponent,
   }
 ];
 

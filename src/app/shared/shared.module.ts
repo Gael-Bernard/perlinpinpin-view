@@ -1,12 +1,20 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CanvasModule } from './canvas/canvas.module';
 
+
+const IMPORTED_EXPORTED = [
+  CanvasModule,
+]
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+  ],
   imports: [
-    CommonModule
+    ...IMPORTED_EXPORTED,
+  ],
+  exports: [
+    ...IMPORTED_EXPORTED,
   ]
 })
 export class SharedModule { }
