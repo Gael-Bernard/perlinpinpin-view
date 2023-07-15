@@ -44,7 +44,18 @@ export default class Vec2 {
     return this.norm();
   }
 
+  /**
+   * Tells if this vector is null, i.e the vector is (0.0, 0.0)
+   * @returns true if vector is null, false otherwise
+   */
+  isNullVector(): boolean {
+    return this.x === 0.0 && this.y === 0.0;
+  }
+
   normalize(): Vec2 {
+    if(this.isNullVector())
+      throw new Error("Can't normalize the null vector");
+
     let norm = this.norm();
     return new Vec2(this.x / norm, this.y / norm);
   }

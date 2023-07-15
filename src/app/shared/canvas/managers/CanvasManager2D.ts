@@ -29,12 +29,7 @@ export default class CanvasManager2D implements CanvasWriter2D {
   constructor(canvas: HTMLCanvasElement, renderer: LocalCanvasRenderer2D) {
     this.setCanvas(canvas);
     this.renderer = renderer;
-    let a = 0;
-    setInterval(() => {
-      if(a++ < 100)
-        this.setOffset(this.getOffset().plus(new Vec2(0.1, 0.0)));
-    }, 100)
-    // this.resetView();
+    this.resetView();
   }
 
   getCanvas() {
@@ -75,6 +70,10 @@ export default class CanvasManager2D implements CanvasWriter2D {
     this.render();
   }
 
+  setScaleWithoutRender(scale: Vec2): void {
+    this.navigation.setScale(scale);
+  }
+
   getOffset(): Vec2 {
     return this.navigation.getOffset();
   }
@@ -82,6 +81,10 @@ export default class CanvasManager2D implements CanvasWriter2D {
   setOffset(navigationOffset: Vec2): void {
     this.navigation.setOffset(navigationOffset);
     this.render();
+  }
+
+  setOffsetWithoutRender(navigationOffset: Vec2): void {
+    this.navigation.setOffset(navigationOffset);
   }
 
   render(): void {

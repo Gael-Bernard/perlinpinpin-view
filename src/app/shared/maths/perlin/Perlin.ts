@@ -21,9 +21,15 @@ export default abstract class Perlin {
     }
   }
 
+  private unroundPosition(position: Vec2): Vec2 {
+    const x = position.x === Math.floor(position.x) ? 0.000_000_001 : position.x;
+    const y = position.y === Math.floor(position.y) ? 0.000_000_001 : position.y;
+    return new Vec2(x, y);
+  }
+
   private mapSurroundingNodesToVectors(surroundings: Vec2Square): Vec2Square {
     const seed = this.getSeed();
-    return mapVec2SquareByField(surroundings, (v) => RandomVec2.mapSeededSimpleHash(v, seed+11) );
+    return mapVec2SquareByField(surroundings, (v) => RandomVec2.mapSeededCosineSineSimpleHash(v, seed) );
   }
 
   private mapSurroundingNodesToRelativeVectors(surroundings: Vec2Square, position: Vec2): Vec2Square {
@@ -39,6 +45,9 @@ export default abstract class Perlin {
   }
 
   public at(position: Vec2): number {
+
+    position = this.unroundPosition(position);
+    console.log("position", position)
 
     const surroundingNodes: Vec2Square = this.getSurroundingNodes(position);
     console.log("surroundingNodes", surroundingNodes)
