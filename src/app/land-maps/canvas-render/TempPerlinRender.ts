@@ -7,7 +7,7 @@ export default class TempPerlinRender implements LocalCanvasRenderer2D {
 
   readonly perlin = new TempPerlin(9748989);
 
-  renderArea(canvas: CanvasWriter2D, area: Rectangle): void {
+  async renderArea(canvas: CanvasWriter2D, area: Rectangle): Promise<void> {
     const topleft: Vec2 = area.origin.map(Math.floor);
     const bottomRight: Vec2 = topleft.plus(area.expansion.map(Math.ceil));
 

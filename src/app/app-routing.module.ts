@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GridVectorsMapComponent } from './perlin-maps/grid-vectors-map/grid-vectors-map.component';
+import { ColorablePerlinMapComponent } from './perlin-maps/colorable-perlin-map/colorable-perlin-map.component';
 
 const routes: Routes = [
   {
+    path: "basic-perlin-examples",
+    component: ColorablePerlinMapComponent,
+  },
+  {
     path: "**",
-    component: GridVectorsMapComponent,
+    redirectTo: "basic-perlin-examples"
   }
 ];
 

@@ -9,7 +9,7 @@ export default class ChessboardRender implements LocalCanvasRenderer2D {
     readonly color2: string,
   ) {}
 
-  renderArea(canvas: CanvasWriter2D, area: Rectangle): void {
+  async renderArea(canvas: CanvasWriter2D, area: Rectangle): Promise<void> {
     const topL: Vec2 = area.origin.map(Math.floor);
     const bottomR: Vec2 = area.origin.plus(area.expansion).map(Math.ceil);
 

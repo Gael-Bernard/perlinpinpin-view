@@ -12,7 +12,7 @@ export interface CanvasWriter2D {
 }
 
 export interface LocalCanvasRenderer2D {
-  renderArea(canvas: CanvasWriter2D, area: Rectangle): void;
+  renderArea(canvas: CanvasWriter2D, area: Rectangle): Promise<void>;
 }
 
 export default class CanvasManager2D implements CanvasWriter2D {
@@ -24,7 +24,7 @@ export default class CanvasManager2D implements CanvasWriter2D {
   private canvas!: HTMLCanvasElement;
   private ctx!: CanvasRenderingContext2D;
   readonly navigation: NavigeableMapper = new NavigeableMapper(Vec2.ONEONE(), Vec2.ORIGIN());
-  readonly renderer: LocalCanvasRenderer2D;
+  private renderer: LocalCanvasRenderer2D;
 
   constructor(canvas: HTMLCanvasElement, renderer: LocalCanvasRenderer2D) {
     this.setCanvas(canvas);
@@ -85,6 +85,15 @@ export default class CanvasManager2D implements CanvasWriter2D {
 
   setOffsetWithoutRender(navigationOffset: Vec2): void {
     this.navigation.setOffset(navigationOffset);
+  }
+
+  getRenderer(): LocalCanvasRenderer2D {
+    return this.renderer;
+  }
+
+  setRenderer(renderer: LocalCanvasRenderer2D): void {
+    this.renderer = renderer;
+    this.render();
   }
 
   render(): void {

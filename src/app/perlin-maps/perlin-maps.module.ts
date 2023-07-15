@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { GridVectorsMapComponent } from './grid-vectors-map/grid-vectors-map.component';
 import { SharedModule } from '../shared/shared.module';
+import { ColorablePerlinMapComponent } from './colorable-perlin-map/colorable-perlin-map.component';
 
 
 
 @NgModule({
   declarations: [
-    GridVectorsMapComponent
+    ColorablePerlinMapComponent,
   ],
   imports: [
     CommonModule,
