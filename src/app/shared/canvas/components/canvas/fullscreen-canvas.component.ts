@@ -1,6 +1,5 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import { BehaviorSubject, Subject } from 'rxjs';
-import CanvasManager2D from '../../managers/CanvasManager';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-fullscreen-canvas',
@@ -9,25 +8,23 @@ import CanvasManager2D from '../../managers/CanvasManager';
 })
 export class FullscreenCanvasComponent implements OnInit {
 
-  canvasManager!: CanvasManager2D;
-
   @ViewChild("canvas", {static: true})
   canvas!: ElementRef<HTMLCanvasElement>;
 
   @Input()
-  canvasLoadListener!: Subject<CanvasManager2D|undefined>;
+  canvasLoadListener!: Subject<HTMLCanvasElement>;
 
 
   ngOnInit(): void {
 
-    this.canvasManager = new CanvasManager2D(this.canvas.nativeElement);
-
-    if(this.canvasLoadListener === undefined) {
-      throw new Error("The canvas does not have a listener property. No interaction with the canvas is possible.");
+    if(this.canvasLoadListener !== undefined) {
+      this.canvasLoadListener.next(this.canvas.nativeElement);
     }
 
-    this.canvasManager
-    this.canvasLoadListener.next(this.canvasManager);
+  }
+
+  getCanvasElement(): HTMLCanvasElement {
+    return this.canvas.nativeElement;
   }
 
 }

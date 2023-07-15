@@ -6,4 +6,3 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 - Fix Perlin noise
 - Refactor ValueSquare
-- Create a Navigeable canvas

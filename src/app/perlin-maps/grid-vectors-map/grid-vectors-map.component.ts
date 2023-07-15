@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-import CanvasManager2D from 'src/app/shared/canvas/managers/CanvasManager';
-import Rectangle from 'src/app/shared/maths/geometry/Rectangle';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import TempPerlinRender from 'src/app/land-maps/canvas-render/TempPerlinRender';
+import { FullscreenCanvasComponent } from 'src/app/shared/canvas/components/canvas/fullscreen-canvas.component';
+import CanvasManager2D from 'src/app/shared/canvas/managers/CanvasManager2D';
 import Vec2 from 'src/app/shared/maths/geometry/Vec2';
 
 @Component({
@@ -11,8 +11,10 @@ import Vec2 from 'src/app/shared/maths/geometry/Vec2';
 })
 export class GridVectorsMapComponent implements OnInit {
 
-  canvasEvent: BehaviorSubject<CanvasManager2D|undefined> =
-      new BehaviorSubject(undefined) as BehaviorSubject<CanvasManager2D|undefined>;
+  @ViewChild("canvas", {static: true})
+  canvasComponent!: FullscreenCanvasComponent;
+
+  canvas!: CanvasManager2D;
 
 
   ngOnInit(): void {
@@ -20,18 +22,10 @@ export class GridVectorsMapComponent implements OnInit {
   }
 
   private initOnCanvasReady() {
-    this.canvasEvent.subscribe({
-      next: (canvas) => {
+    const canvasElem: HTMLCanvasElement = this.canvasComponent.getCanvasElement();
 
-        if(canvas === undefined)
-          return;
-
-        const rect = new Rectangle(new Vec2(16, 16), new Vec2(32, 32));
-        canvas.drawPlainRectangle(rect, "green");
-
-      },
-    });
+    this.canvas = new CanvasManager2D(canvasElem, new TempPerlinRender());
+    this.canvas.setScale(Vec2.SAME(64));
   }
-
 
 }
