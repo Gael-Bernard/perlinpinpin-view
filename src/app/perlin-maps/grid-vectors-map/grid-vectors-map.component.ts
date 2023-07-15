@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import TempPerlinRender from 'src/app/land-maps/canvas-render/TempPerlinRender';
 import { FullscreenCanvasComponent } from 'src/app/shared/canvas/components/canvas/fullscreen-canvas.component';
-import CanvasManager2D from 'src/app/shared/canvas/managers/CanvasManager2D';
+import CanvasManager2D from 'src/app/shared/canvas/manager/CanvasManager2D';
 import Vec2 from 'src/app/shared/maths/geometry/Vec2';
 
 @Component({

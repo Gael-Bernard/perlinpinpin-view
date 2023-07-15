@@ -1,6 +1,6 @@
 import Rectangle from "../../maths/geometry/Rectangle";
 import Vec2 from "../../maths/geometry/Vec2";
-import { CanvasWriter2D, LocalCanvasRenderer2D } from "../managers/CanvasManager2D";
+import { CanvasWriter2D, LocalCanvasRenderer2D } from "../manager/CanvasManager2D";
 
 export default class ChessboardRender implements LocalCanvasRenderer2D {
 

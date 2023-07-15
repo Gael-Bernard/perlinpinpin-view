@@ -1,4 +1,4 @@
-import { CanvasWriter2D, LocalCanvasRenderer2D } from "src/app/shared/canvas/managers/CanvasManager2D";
+import { CanvasWriter2D, LocalCanvasRenderer2D } from "src/app/shared/canvas/manager/CanvasManager2D";
 import Rectangle from "src/app/shared/maths/geometry/Rectangle";
 import Vec2 from "src/app/shared/maths/geometry/Vec2";
 import TempPerlin from "src/app/shared/maths/perlin/TempPerlin";

@@ -1,5 +1,5 @@
 import Vec2 from "src/app/shared/maths/geometry/Vec2";
-import FontOptions from "../model/FontOptions";
+import FontOptions from "./FontOptions";
 import Rectangle from "src/app/shared/maths/geometry/Rectangle";
 import NavigeableMapper from "src/app/shared/maths/navigeable/NavigeableMapper";
 import ChessboardRender from "../common-canvas-render/ChessboardRender";
