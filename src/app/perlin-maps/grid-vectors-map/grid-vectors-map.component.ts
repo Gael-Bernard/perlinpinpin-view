@@ -25,7 +25,7 @@ export class GridVectorsMapComponent implements OnInit {
     const canvasElem: HTMLCanvasElement = this.canvasComponent.getCanvasElement();
 
     this.canvas = new CanvasManager2D(canvasElem, new TempPerlinRender());
-    this.canvas.setScaleWithoutRender(Vec2.SAME(64));
+    this.canvas.setScaleWithoutRender(Vec2.SAME(128));
     this.canvas.render();
   }
 

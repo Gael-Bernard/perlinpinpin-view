@@ -36,12 +36,12 @@ export default abstract class Perlin {
     return mapVec2SquareByField(surroundings, (v) => position.minus( v ).normalize());
   }
 
-  private fade(x: number): number {
-    return ((6*x - 15) + 10)*x*x*x*x;
+  private easeInOutSine(x: number): number {
+    return -(Math.cos(Math.PI * x) - 1) / 2;
   }
 
   private interpolateDotProducts(val: NumberSquare, position: Vec2) {
-    let {x, y} = position.map(n => this.fade(n - Math.floor(n)) );
+    let {x, y} = position.map(n => this.easeInOutSine(n - Math.floor(n)) );
     const leftInterpolation = LinearInterpolation.applyForDx1(val.topLeft, val.bottomLeft, y);
     const rightInterpolation = LinearInterpolation.applyForDx1(val.topRight, val.bottomRight, y);
     return LinearInterpolation.applyForDx1(leftInterpolation, rightInterpolation, x);
