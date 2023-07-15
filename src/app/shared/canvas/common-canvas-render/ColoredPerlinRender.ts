@@ -39,8 +39,6 @@ export default class ColoredPerlinRender implements LocalCanvasRenderer2D {
 
     });
 
-
-
   }
 
   valueToColorWithThreshold(val: number): Color {

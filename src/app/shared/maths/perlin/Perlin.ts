@@ -22,8 +22,8 @@ export default abstract class Perlin {
   }
 
   private unroundPosition(position: Vec2): Vec2 {
-    const x = position.x === Math.floor(position.x) ? 0.000_000_001 : position.x;
-    const y = position.y === Math.floor(position.y) ? 0.000_000_001 : position.y;
+    const x = position.x === Math.floor(position.x) ? position.x + 0.000_000_000_001 : position.x;
+    const y = position.y === Math.floor(position.y) ? position.y + 0.000_000_000_001 : position.y;
     return new Vec2(x, y);
   }
 
@@ -50,20 +50,20 @@ export default abstract class Perlin {
   public at(position: Vec2): number {
 
     position = this.unroundPosition(position);
-    console.log("position", position)
+    //console.log("position", position)
 
     const surroundingNodes: Vec2Square = this.getSurroundingNodes(position);
-    console.log("surroundingNodes", surroundingNodes)
+    //console.log("surroundingNodes", surroundingNodes)
 
     const surroundingVectors: Vec2Square = this.mapSurroundingNodesToVectors(surroundingNodes);
-    console.log("surroundingVectors", surroundingVectors)
+    //console.log("surroundingVectors", surroundingVectors)
     const relativeVectors: Vec2Square = this.mapSurroundingNodesToRelativeVectors(surroundingNodes, position);
-    console.log("relativeVectors", relativeVectors)
+    //console.log("relativeVectors", relativeVectors)
 
     const dotProducts: NumberSquare = dotProductByField(surroundingVectors, relativeVectors);
-    console.log("dotProducts", dotProducts)
+    //console.log("dotProducts", dotProducts)
     const interpolation: number = this.interpolateDotProducts(dotProducts, position);
-    console.log("interpolation", interpolation)
+    //console.log("interpolation", interpolation)
 
     return interpolation;
   }
