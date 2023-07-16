@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from "@angular/forms"
 import { SharedModule } from '../shared/shared.module';
 import { ColorablePerlinMapComponent } from './colorable-perlin-map/colorable-perlin-map.component';
 import { SideviewPerlinMapComponent } from './sideview-perlin-map/sideview-perlin-map.component';
+import { SideviewRandomMapComponent } from './sideview-random-map/sideview-random-map.component';
 
 
 
@@ -11,6 +12,7 @@ import { SideviewPerlinMapComponent } from './sideview-perlin-map/sideview-perli
   declarations: [
     ColorablePerlinMapComponent,
     SideviewPerlinMapComponent,
+    SideviewRandomMapComponent,
   ],
   imports: [
     CommonModule,
