@@ -1,0 +1,26 @@
+<app-fullscreen-canvas #canvas>
+  <div class="options-row">
+
+    <label for="heightRatio">Height ({{height100}}%)</label>
+    <input name="heightRatio" type="range" min="0.0" max="1.0" step="0.01"
+    [formControl]="heightRatio" (input)="render()">
+
+
+    <label for="amplitudeRatio">Amplitude ({{amplitude100}}%)</label>
+    <input name="amplitudeRatio" type="range" min="0.0" max="1.0" step="0.01"
+    [formControl]="amplitudeRatio" (input)="render()">
+
+
+    <label for="xStretch">X-axis stretching ({{xStretchValue}})</label>
+    <input name="xStretch" type="range" min="-3.0" max="5.0" step="0.01"
+    [formControl]="xStretch" (input)="render()">
+
+
+    <label for="xOffset">X-axis offset</label>
+    <input name="xOffset" type="number"
+    [formControl]="xOffset" (input)="render()">
+
+    <button (click)="render()">RENDER</button>
+
+  </div>
+</app-fullscreen-canvas>
