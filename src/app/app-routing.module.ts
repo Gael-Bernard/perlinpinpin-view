@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ColorablePerlinMapComponent } from './perlin-maps/colorable-perlin-map/colorable-perlin-map.component';
-import { SideviewPerlinMapComponent } from './perlin-maps/sideview-perlin-map/sideview-perlin-map.component';
-import { SideviewRandomMapComponent } from './perlin-maps/sideview-random-map/sideview-random-map.component';
+import { ColorablePerlinMapComponent } from './pages/simple-generations/colorable-perlin-map/colorable-perlin-map.component';
+import { SideviewPerlinMapComponent } from './pages/simple-generations/sideview-perlin-map/sideview-perlin-map.component';
+import { SideviewRandomMapComponent } from './pages/simple-generations/sideview-random-map/sideview-random-map.component';
 
 const routes: Routes = [
   {

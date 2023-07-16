@@ -1,7 +1,7 @@
-import Vec2 from '../geometry/Vec2';
-import LinearInterpolation from '../interpolation/LinearInterpolation';
-import RandomVec2 from "../random/RandomVec2";
+import Vec2 from 'src/app/maths/geometry/Vec2';
 import { Vec2Square, dotProductByField, mapVec2SquareByField, NumberSquare } from './ValueSquare';
+import LinearInterpolation from 'src/app/maths/interpolation/LinearInterpolation';
+import RandomVec2 from 'src/app/maths/random/RandomVec2';
 
 
 

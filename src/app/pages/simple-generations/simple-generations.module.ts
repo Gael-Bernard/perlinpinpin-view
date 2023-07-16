@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule } from "@angular/forms"
-import { SharedModule } from '../shared/shared.module';
 import { ColorablePerlinMapComponent } from './colorable-perlin-map/colorable-perlin-map.component';
 import { SideviewPerlinMapComponent } from './sideview-perlin-map/sideview-perlin-map.component';
 import { SideviewRandomMapComponent } from './sideview-random-map/sideview-random-map.component';
+import { CanvasModule } from 'src/app/canvas/canvas.module';
 
 
 
@@ -16,8 +16,8 @@ import { SideviewRandomMapComponent } from './sideview-random-map/sideview-rando
   ],
   imports: [
     CommonModule,
-    SharedModule,
+    CanvasModule,
     ReactiveFormsModule,
   ]
 })
-export class PerlinMapsModule { }
+export class SimpleGenerationsModule { }

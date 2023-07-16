@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PerlinMapsModule } from './perlin-maps/perlin-maps.module';
+import { SimpleGenerationsModule } from './pages/simple-generations/simple-generations.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { PerlinMapsModule } from './perlin-maps/perlin-maps.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PerlinMapsModule,
+    SimpleGenerationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

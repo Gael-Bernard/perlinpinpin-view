@@ -1,10 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import SidePerlinRender from 'src/app/shared/canvas/common-canvas-render/SidePerlinRender';
-import { FullscreenCanvasComponent } from 'src/app/shared/canvas/components/canvas/fullscreen-canvas.component';
-import CanvasManager2D from 'src/app/shared/canvas/manager/CanvasManager2D';
-import Color from 'src/app/shared/canvas/manager/Color';
-import Vec2 from 'src/app/shared/maths/geometry/Vec2';
+import { FullscreenCanvasComponent } from 'src/app/canvas/components/canvas/fullscreen-canvas.component';
+import CanvasManager2D from 'src/app/canvas/manager/CanvasManager2D';
+import Color from 'src/app/canvas/manager/Color';
+import SidePerlinRender from 'src/app/generation/canvas-renderers/simple/perlin/SidePerlinRender';
+import Vec2 from 'src/app/maths/geometry/Vec2';
 
 @Component({
   selector: 'app-sideview-perlin-map',

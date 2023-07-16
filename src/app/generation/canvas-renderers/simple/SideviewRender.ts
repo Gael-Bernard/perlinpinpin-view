@@ -1,7 +1,7 @@
-import Rectangle from "../../maths/geometry/Rectangle";
-import Vec2 from "../../maths/geometry/Vec2";
-import { CanvasWriter2D, LocalCanvasRenderer2D } from "../manager/CanvasManager2D";
-import Color from "../manager/Color";
+import { CanvasWriter2D, LocalCanvasRenderer2D } from "src/app/canvas/manager/CanvasManager2D";
+import Color from "src/app/canvas/manager/Color";
+import Rectangle from "src/app/maths/geometry/Rectangle";
+import Vec2 from "src/app/maths/geometry/Vec2";
 
 export default abstract class SideviewRender implements LocalCanvasRenderer2D {
 

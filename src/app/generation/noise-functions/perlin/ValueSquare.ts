@@ -1,4 +1,4 @@
-import Vec2 from "../geometry/Vec2";
+import Vec2 from "src/app/maths/geometry/Vec2";
 
 type ValueSquare<T> = {
   topLeft: T,
