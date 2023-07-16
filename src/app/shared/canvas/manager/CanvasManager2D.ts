@@ -6,7 +6,7 @@ import ChessboardRender from "../common-canvas-render/ChessboardRender";
 
 export interface CanvasWriter2D {
   plainBackground(fillStyle: string): void;
-  drawPixel(coordinates: Vec2, fillStyle: string): void;
+  pixel(coordinates: Vec2, fillStyle: string): void;
   plainRectangle(r: Rectangle, fillStyle: string): void;
   text(origin: Vec2, text: string, options: FontOptions): void;
 }
@@ -107,11 +107,12 @@ export default class CanvasManager2D implements CanvasWriter2D {
 
   plainBackground(fillStyle: string): void {
     this.ctx.fillStyle = fillStyle;
-    let everything = new Rectangle(new Vec2(0,0), this.getSize());
-    this.plainRectangle(everything, fillStyle);
+    const topLeft = Vec2.ORIGIN();
+    const expansion = this.getSize();
+    this.ctx.fillRect(topLeft.x, topLeft.y, expansion.x, expansion.y);
   }
 
-  drawPixel(coordinates: Vec2, fillStyle: string): void {
+  pixel(coordinates: Vec2, fillStyle: string): void {
     this.ctx.fillStyle = fillStyle;
     const rectAbs = new Rectangle(coordinates, Vec2.ONEONE());
     const rectCanvas = this.navigation.toNavigationRect(rectAbs);

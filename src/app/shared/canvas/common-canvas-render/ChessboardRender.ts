@@ -20,7 +20,7 @@ export default class ChessboardRender implements LocalCanvasRenderer2D {
         const pos = new Vec2(x, y);
         const color = (x + y) % 2 == 0 ? this.color1 : this.color2;
 
-        canvas.drawPixel(pos, color);
+        canvas.pixel(pos, color);
 
       }
     }
