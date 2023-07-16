@@ -1,7 +1,6 @@
 import Rectangle from "../../maths/geometry/Rectangle";
 import Vec2 from "../../maths/geometry/Vec2";
 import Perlin from "../../maths/perlin/Perlin";
-import TempPerlin from "../../maths/perlin/TempPerlin";
 import { CanvasWriter2D, LocalCanvasRenderer2D } from "../manager/CanvasManager2D";
 import Color from '../manager/Color';
 
@@ -15,7 +14,7 @@ export default class ColoredPerlinRender implements LocalCanvasRenderer2D {
     public color2: Color,
     public threshold?: number,
   ) {
-    this.perlin = new TempPerlin(this.seed);
+    this.perlin = new Perlin(this.seed);
   }
 
   async renderArea(canvas: CanvasWriter2D, area: Rectangle): Promise<void> {

@@ -5,9 +5,9 @@ import { Vec2Square, dotProductByField, mapVec2SquareByField, NumberSquare } fro
 
 
 
-export default abstract class Perlin {
+export default class Perlin {
 
-  protected abstract getSeed(): number;
+  constructor(readonly seed: number) { }
 
   private getSurroundingNodes(position: Vec2): Vec2Square {
     const xTopLeft = Math.floor(position.x);
@@ -28,8 +28,7 @@ export default abstract class Perlin {
   }
 
   private mapSurroundingNodesToVectors(surroundings: Vec2Square): Vec2Square {
-    const seed = this.getSeed();
-    return mapVec2SquareByField(surroundings, (v) => RandomVec2.mapSeededCosineSineSimpleHash(v, seed) );
+    return mapVec2SquareByField(surroundings, (v) => RandomVec2.mapSeededCosineSineSimpleHash(v, this.seed) );
   }
 
   private mapSurroundingNodesToRelativeVectors(surroundings: Vec2Square, position: Vec2): Vec2Square {

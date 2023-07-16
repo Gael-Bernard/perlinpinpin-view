@@ -1,13 +1,11 @@
-import Rectangle from "../../maths/geometry/Rectangle";
 import Vec2 from "../../maths/geometry/Vec2";
-import TempPerlin from "../../maths/perlin/TempPerlin";
-import { CanvasWriter2D, LocalCanvasRenderer2D } from "../manager/CanvasManager2D";
+import Perlin from "../../maths/perlin/Perlin";
 import Color from "../manager/Color";
 import SideviewRender from "./SideviewRender";
 
 export default class SidePerlinRender extends SideviewRender {
 
-  readonly perlin = new TempPerlin(61);
+  readonly perlin = new Perlin(61);
 
   constructor(
     y: number,
