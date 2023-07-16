@@ -49,8 +49,8 @@ export class ColorablePerlinMapComponent {
   }
 
   mars(): void {
-    this.renderer.color1 = new Color(0.7, 0.3, 0.1, 1.0);
-    this.renderer.color2 = new Color(0.6, 0.2, 0.1, 1.0);
+    this.renderer.color1 = new Color(180, 75, 25, 1.0);
+    this.renderer.color2 = new Color(155, 50, 25, 1.0);
     this.renderer.threshold = undefined;
     this.canvas.render();
   }
