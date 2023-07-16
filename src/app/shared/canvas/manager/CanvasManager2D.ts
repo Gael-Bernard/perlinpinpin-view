@@ -23,7 +23,7 @@ export default class CanvasManager2D implements CanvasWriter2D {
 
   private canvas!: HTMLCanvasElement;
   private ctx!: CanvasRenderingContext2D;
-  readonly navigation: NavigeableMapper = new NavigeableMapper(Vec2.ONEONE(), Vec2.ORIGIN());
+  readonly navigation: NavigeableMapper = new NavigeableMapper(Vec2.ONEONE, Vec2.ORIGIN);
   private renderer: LocalCanvasRenderer2D;
 
   constructor(canvas: HTMLCanvasElement, renderer: LocalCanvasRenderer2D) {
@@ -107,14 +107,14 @@ export default class CanvasManager2D implements CanvasWriter2D {
 
   plainBackground(fillStyle: string): void {
     this.ctx.fillStyle = fillStyle;
-    const topLeft = Vec2.ORIGIN();
+    const topLeft = Vec2.ORIGIN;
     const expansion = this.getSize();
     this.ctx.fillRect(topLeft.x, topLeft.y, expansion.x, expansion.y);
   }
 
   pixel(coordinates: Vec2, fillStyle: string): void {
     this.ctx.fillStyle = fillStyle;
-    const rectAbs = new Rectangle(coordinates, Vec2.ONEONE());
+    const rectAbs = new Rectangle(coordinates, Vec2.ONEONE);
     const rectCanvas = this.navigation.toNavigationRect(rectAbs);
     this.ctx.fillRect(rectCanvas.origin.x, rectCanvas.origin.y, rectCanvas.expansion.x, rectCanvas.expansion.y);
   }

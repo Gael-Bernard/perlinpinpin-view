@@ -5,32 +5,15 @@ export default class Vec2 {
     readonly y: number,
   ) { }
 
-  public static ORIGIN() {
-    return new Vec2(0.0, 0.0);
-  }
-
-  public static ONEONE() {
-    return new Vec2(1.0, 1.0);
-  }
+  public static ORIGIN = new Vec2(0.0, 0.0);
+  public static ONEONE = new Vec2(1.0, 1.0);
+  public static XPOS = new Vec2(1.0, 0.0);
+  public static XNEG = new Vec2(-1.0, 0.0);
+  public static YPOS = new Vec2(0.0, 1.0);
+  public static YNEG = new Vec2(0.0, -1.0);
 
   public static SAME(value: number) {
     return new Vec2(value, value);
-  }
-
-  public static XPOS() {
-    return new Vec2(1.0, 0.0);
-  }
-
-  public static XNEG() {
-    return new Vec2(-1.0, 0.0);
-  }
-
-  public static YPOS() {
-    return new Vec2(0.0, 1.0);
-  }
-
-  public static YNEG() {
-    return new Vec2(0.0, -1.0);
   }
 
   norm(): number {
