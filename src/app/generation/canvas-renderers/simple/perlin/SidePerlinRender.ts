@@ -1,7 +1,7 @@
 import Perlin from "src/app/generation/noise-functions/perlin/Perlin";
 import SideviewRender from "../SideviewRender";
-import Color from "src/app/canvas/manager/Color";
 import Vec2 from "src/app/maths/geometry/Vec2";
+import Color from "src/app/base-components/color/Color";
 
 export default class SidePerlinRender extends SideviewRender {
 

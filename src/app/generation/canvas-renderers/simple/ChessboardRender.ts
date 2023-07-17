@@ -1,4 +1,4 @@
-import { CanvasWriter2D, LocalCanvasRenderer2D } from "src/app/canvas/manager/CanvasManager2D";
+import { CanvasWriter2D, LocalCanvasRenderer2D } from "src/app/base-components/canvas/CanvasManager2D";
 import Rectangle from "src/app/maths/geometry/Rectangle";
 import Vec2 from "src/app/maths/geometry/Vec2";
 

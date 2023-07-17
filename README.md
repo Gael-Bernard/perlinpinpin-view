@@ -4,5 +4,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## TODO
 
-- Fix Perlin noise
 - Refactor ValueSquare

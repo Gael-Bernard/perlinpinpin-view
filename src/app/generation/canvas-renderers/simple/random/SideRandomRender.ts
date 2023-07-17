@@ -1,4 +1,4 @@
-import Color from "src/app/canvas/manager/Color";
+import Color from "src/app/base-components/color/Color";
 import SideviewRender from "../SideviewRender";
 
 export default class SideRandomRender extends SideviewRender {
