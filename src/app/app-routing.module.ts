@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ColorablePerlinMapComponent } from './pages/simple-generations/colorable-perlin-map/colorable-perlin-map.component';
 import { SideviewPerlinMapComponent } from './pages/simple-generations/sideview-perlin-map/sideview-perlin-map.component';
 import { SideviewRandomMapComponent } from './pages/simple-generations/sideview-random-map/sideview-random-map.component';
+import { SideviewPerlin3MapComponent } from './pages/simple-generations/sideview-perlin3-map/sideview-perlin3-map.component';
 
 const routes: Routes = [
   {
@@ -10,8 +11,12 @@ const routes: Routes = [
     component: ColorablePerlinMapComponent,
   },
   {
-    path: "sideview-perlin-examples",
+    path: "sideview-perlin-example",
     component: SideviewPerlinMapComponent,
+  },
+  {
+    path: "sideview-perlin3-example",
+    component: SideviewPerlin3MapComponent,
   },
   {
     path: "sideview-random-examples",

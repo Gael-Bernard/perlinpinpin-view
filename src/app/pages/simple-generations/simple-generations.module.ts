@@ -5,6 +5,7 @@ import { ColorablePerlinMapComponent } from './colorable-perlin-map/colorable-pe
 import { SideviewPerlinMapComponent } from './sideview-perlin-map/sideview-perlin-map.component';
 import { SideviewRandomMapComponent } from './sideview-random-map/sideview-random-map.component';
 import { CanvasModule } from 'src/app/base-components/canvas/canvas.module';
+import { SideviewPerlin3MapComponent } from './sideview-perlin3-map/sideview-perlin3-map.component';
 
 
 
@@ -13,6 +14,7 @@ import { CanvasModule } from 'src/app/base-components/canvas/canvas.module';
     ColorablePerlinMapComponent,
     SideviewPerlinMapComponent,
     SideviewRandomMapComponent,
+    SideviewPerlin3MapComponent,
   ],
   imports: [
     CommonModule,
