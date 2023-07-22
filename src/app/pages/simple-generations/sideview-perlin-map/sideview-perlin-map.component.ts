@@ -3,8 +3,8 @@ import { FormControl } from '@angular/forms';
 import { FullscreenCanvasComponent } from 'src/app/base-components/canvas/components/canvas/fullscreen-canvas.component';
 import CanvasManager2D from 'src/app/base-components/canvas/CanvasManager2D';
 import Color from 'src/app/base-components/color/Color';
-import SidePerlinRender from 'src/app/generation/canvas-renderers/simple/perlin/SidePerlinRender';
 import Vec2 from 'src/app/maths/geometry/Vec2';
+import SidePerlinRender from 'src/app/canvas-renderers/simple/perlin/SidePerlinRender';
 
 @Component({
   selector: 'app-sideview-perlin-map',

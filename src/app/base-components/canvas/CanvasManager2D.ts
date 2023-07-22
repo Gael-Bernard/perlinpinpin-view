@@ -1,8 +1,8 @@
-import ChessboardRender from "src/app/generation/canvas-renderers/simple/ChessboardRender";
 import Rectangle from "src/app/maths/geometry/Rectangle";
 import Vec2 from "src/app/maths/geometry/Vec2";
 import FontOptions from "./FontOptions";
 import NavigeableMapper from "src/app/maths/navigeable/NavigeableMapper";
+import ChessboardRender from "src/app/canvas-renderers/simple/ChessboardRender";
 
 export interface CanvasWriter2D {
   plainBackground(fillStyle: string): void;

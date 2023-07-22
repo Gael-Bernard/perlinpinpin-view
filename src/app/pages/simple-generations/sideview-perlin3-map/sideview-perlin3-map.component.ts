@@ -3,7 +3,7 @@ import { FormControl } from '@angular/forms';
 import CanvasManager2D from 'src/app/base-components/canvas/CanvasManager2D';
 import { FullscreenCanvasComponent } from 'src/app/base-components/canvas/components/canvas/fullscreen-canvas.component';
 import Color from 'src/app/base-components/color/Color';
-import SidePerlin3Render from 'src/app/generation/canvas-renderers/simple/perlin/SidePerlin3Render';
+import SidePerlin3Render from 'src/app/canvas-renderers/simple/perlin/SidePerlin3Render';
 import Vec2 from 'src/app/maths/geometry/Vec2';
 
 @Component({

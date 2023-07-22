@@ -2,8 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import { FullscreenCanvasComponent } from 'src/app/base-components/canvas/components/canvas/fullscreen-canvas.component';
 import CanvasManager2D from 'src/app/base-components/canvas/CanvasManager2D';
 import Color from 'src/app/base-components/color/Color';
-import ColoredPerlinRender from 'src/app/generation/canvas-renderers/simple/perlin/ColoredPerlinRender';
 import Vec2 from 'src/app/maths/geometry/Vec2';
+import ColoredPerlinRender from 'src/app/canvas-renderers/simple/perlin/ColoredPerlinRender';
 
 @Component({
   selector: 'app-colorable-perlin-map',

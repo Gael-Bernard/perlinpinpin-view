@@ -1,8 +1,8 @@
 import SideviewRender from "../SideviewRender";
-import PerlinLayer from '../../../noise-functions/perlin/PerlinLayer';
 import Vec2 from "src/app/maths/geometry/Vec2";
 import Color from "src/app/base-components/color/Color";
 import MultilayerPerlin from "src/app/generation/noise-functions/perlin/MultilayerPerlin";
+import PerlinLayer from "src/app/generation/noise-functions/perlin/PerlinLayer";
 
 export default class SidePerlin3Render extends SideviewRender {
 
