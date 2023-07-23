@@ -1,1 +1,6 @@
-<app-fullscreen-canvas #canvas></app-fullscreen-canvas>
+<app-fullscreen-canvas #canvas>
+  <div class="action-bar">
+    <label>X coordinate</label>
+    <input type="number" step="4" [formControl]="xCoord" (input)="onFormChange()">
+  </div>
+</app-fullscreen-canvas>

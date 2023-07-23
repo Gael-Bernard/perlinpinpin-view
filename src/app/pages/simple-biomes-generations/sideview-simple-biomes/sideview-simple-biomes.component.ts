@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import CanvasManager2D from 'src/app/base-components/canvas/CanvasManager2D';
 import { FullscreenCanvasComponent } from 'src/app/base-components/canvas/components/canvas/fullscreen-canvas.component';
 import SquaresCanvasRender from 'src/app/canvas-renderers/square/SquaresCanvasRender';
@@ -19,9 +20,17 @@ export class SideviewSimpleBiomesComponent implements OnInit {
   @ViewChild("canvas", {static: true})
   readonly canvasElem!: FullscreenCanvasComponent;
 
+  xCoord: FormControl = new FormControl<number>(0);
+
   ngOnInit(): void {
     this.canvas = new CanvasManager2D(this.canvasElem.getCanvasElement(), this.renderer);
     this.canvas.setScale(Vec2.SAME(16));
+    this.canvas.render();
+  }
+
+  onFormChange(): void {
+    const offset = this.canvas.getOffset();
+    this.canvas.setOffset(new Vec2(this.xCoord.value as number, offset.y));
     this.canvas.render();
   }
 

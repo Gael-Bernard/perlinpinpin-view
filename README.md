@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## TODO
 
-- Create a component for sideviews
-- Create different geological areas
-- Add a skin to the 2D view
+### Biomes
+
+- Make a transition between oceans and land
+- Make classes for biomes
+- Add textures
