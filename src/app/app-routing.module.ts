@@ -4,6 +4,7 @@ import { ColorablePerlinMapComponent } from './pages/simple-generations/colorabl
 import { SideviewPerlinMapComponent } from './pages/simple-generations/sideview-perlin-map/sideview-perlin-map.component';
 import { SideviewRandomMapComponent } from './pages/simple-generations/sideview-random-map/sideview-random-map.component';
 import { SideviewPerlin3MapComponent } from './pages/simple-generations/sideview-perlin3-map/sideview-perlin3-map.component';
+import { SideviewSimpleBiomesComponent } from './pages/simple-biomes-generations/sideview-simple-biomes/sideview-simple-biomes.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: "sideview-random-examples",
     component: SideviewRandomMapComponent,
+  },
+  {
+    path: "sideview-simple-biomes",
+    component: SideviewSimpleBiomesComponent,
   },
   {
     path: "**",
