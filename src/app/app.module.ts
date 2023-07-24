@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SimpleGenerationsModule } from './pages/simple-generations/simple-generations.module';
 import { SimpleBiomesGenerationsModule } from './pages/simple-biomes-generations/simple-biomes-generations.module';
+import { ContinentGenerationsModule } from './pages/continent-generations/continent-generations.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { SimpleBiomesGenerationsModule } from './pages/simple-biomes-generations
     AppRoutingModule,
     SimpleGenerationsModule,
     SimpleBiomesGenerationsModule,
+    ContinentGenerationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
